@@ -1,1 +1,1 @@
-https://sebue.github.io/-SDA-ServletProjekt01/
+https://sebue.github.io/Languages/
