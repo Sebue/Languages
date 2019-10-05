@@ -58,23 +58,23 @@
                 <pre>
                     <code data-trim data-noescape>
                     public enum LangProvider {
-    INSTANCE;
+                        INSTANCE;
 
-    private ResourceBundle bundle = ResourceBundle.getBundle("lang", Locale.getDefault());
+                        private ResourceBundle bundle = ResourceBundle.getBundle("lang", Locale.getDefault());
 
-    public void setLanguage(Locale locale) {
-        this.bundle = ResourceBundle.getBundle("lang", locale);
-    }
+                        public void setLanguage(Locale locale) {
+                            this.bundle = ResourceBundle.getBundle("lang", locale);
+                        }
 
-    public String getMessage(String template, String... params) {
-        String value =  MessageFormat.format(bundle.getString(template), params);
-        try {
-            return new String(value.getBytes("ISO-8859-1"),"UTF-8");
-        } catch (Exception e) {
-            return "Problem in format to UTF-8";
-        }
-    }
-}
+                        public String getMessage(String template, String... params) {
+                            String value =  MessageFormat.format(bundle.getString(template), params);
+                            try {
+                                return new String(value.getBytes("ISO-8859-1"),"UTF-8");
+                            } catch (Exception e) {
+                                return "Problem in format to UTF-8";
+                            }
+                        }
+                    }
                     </code>
                 </pre>
             </section>
