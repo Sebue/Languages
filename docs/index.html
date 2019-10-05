@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <title>SDA - języki</title>
@@ -10,7 +11,7 @@
     <link rel="stylesheet" href="css/theme/white.css">
 
     <!-- Theme used for syntax highlighting of code -->
-    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <link rel="stylesheet" href="lib/css/rainbow.css">
 
     <!-- Printing and PDF exports -->
     <script>
@@ -33,29 +34,26 @@
         <section>
             <section><h1>Resource</h1></section>
             <section>
-                <p>Stwórz folder w src/main o nazwie resources</p>
-                <p>Oznacz go - prawy przycisk, Mark directory as -> Resources Root</p>
-            </section>
-            <section>
-                <p>Stwórz swój zasób językowy: prawy przycisk, New -> Resource Bundle</p>
-                <p>Nazwij go (np. languages) i wybierz lokalizacje które Cię interesują (eng, pl)</p>
+                <p>Stwórz folder w <i>src/main</i> o nazwie <i>resources</i></p>
+                <p>Oznacz go - prawy przycisk, <b>Mark directory as -> Resources Root</b></p>
+                <p>Stwórz swój zasób językowy - prawy przycisk, <b>New -> Resource Bundle</b></p>
+                <p>Nazwij go (np. <i>languages</i>) i wybierz lokalizacje które Cię interesują (<i>eng</i>, <i>pl</i>)</p>
             </section>
             <section>
                 <img data-src="images/ss/create_bundle.png">
             </section>
             <section>
-                <p>Nową właściwość (property) możesz dodać na dwa sposoby - ręcznie w zakładce text lub automatycznie
-                    przez
-                    IDE</p>
+                <p>Nową właściwość (<i>property</i>) możesz dodać na dwa sposoby - ręcznie w zakładce <i>text</i> lub automatycznie
+                    przez IDE</p>
             </section>
             <section>
                 <img data-src="images/ss/create_property.png">
             </section>
         </section>
         <section>
-            <section><h1>Klasa ustawiająca odpowiedni język</h1></section>
             <section>
-                <pre><code data-trim data-noescape>
+                <h1>Klasa ustawiająca odpowiedni język</h1>
+                <pre class="java"><code class="stretch" data-trim contenteditable>
 public enum LangProvider {
     INSTANCE;
 
@@ -78,12 +76,11 @@ public enum LangProvider {
             </section>
         </section>
         <section>
-            <section><h1>Kontroler do zmiany języka</h1></section>
             <section>
-                <pre><code data-trim data-noescape>
+                <h1>Kontroler do zmiany języka</h1>
+                <pre class="java"><code class="stretch" data-trim contenteditable>
 @WebServlet(name = "languageServlet", urlPatterns = {"/languageServlet"})
 public class LanguageServlet extends HttpServlet {
-
     private final static String LANG = "lang";
     private final static String PL_LANG = "pl";
 
@@ -103,12 +100,22 @@ public class LanguageServlet extends HttpServlet {
             </section>
         </section>
         <section>
-            <h1>Notatki</h1>
-            <p class="fragment" data-fragment-index="1">Stworzenie resource</p>
-            <p class="fragment" data-fragment-index="2">Stworzenie klasy enumowej</p>
-            <p class="fragment" data-fragment-index="3">Controller do języków</p>
-            <p class="fragment" data-fragment-index="4">Zastosowanie w JSP (flagi?)</p>
-            <p class="fragment" data-fragment-index="5">Zrobić to na nowym projekcie</p>
+            <section>
+                <h2>Zmiana języka za pomocą kodu JSP</h2>
+                <pre class="html"><code class="stretch" data-trim contenteditable>
+        <div id="flag">
+            <a href="/project/languageServlet?lang=pl">
+            <img class="language_flag" src="resources/images/pl_flag.jpg" width="50" height="20"/></a>
+            <a href="/project/languageServlet?lang=en">
+            <img class="language_flag" src="resources/images/en_flag.jpg" width="50" height="20"/></a>
+        </div>
+                </code></pre>
+                <h2>Wykorzystanie na stronie JSP</h2>
+                <pre class="jsp"><code class="stretch" data-trim contenteditable>
+<a href="index.jsp"><%= LangProvider.INSTANCE.getMessage("mainsite")%></a>
+<p><%= LangProvider.INSTANCE.getMessage("greetings")%></p>
+                </code></pre>
+            </section>
         </section>
     </div>
 </div>
@@ -121,6 +128,8 @@ public class LanguageServlet extends HttpServlet {
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+    width: '100%',
+    height: '100%',
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
