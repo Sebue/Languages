@@ -1,69 +1,71 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>SDA - języki</title>
+    <title>SDA - języki</title>
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/white.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/white.css">
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
+    <!-- Printing and PDF exports -->
+    <script>
 			var link = document.createElement( 'link' );
 			link.rel = 'stylesheet';
 			link.type = 'text/css';
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>
-					<h1>Languages</h1>
-				</section>
-                <section>Resource</section>
-                    <section>
-                        <section>
-                            Stwórz folder w src/main o nazwie resources
-                            Oznacz go - prawy przycisk, Mark directory as -> Resources Root
-                        </section>
-                        <section>
-                            Stwórz swój zasób językowy: prawy przycisk, New -> Resource Bundle
-                            Nazwij go (np. languages) i wybierz lokalizacje które Cię interesują (eng, pl)
-                        </section>
-                        <section>
-                            Nową właściwość (property) możesz dodać na dwa sposoby - ręcznie w zakładce text lub automatycznie przez IDE
-                        </section>
-                    </section>
-                <section>
-                    <h1>Notatki</h1>
-                    <p class="fragment" data-fragment-index="1">Stworzenie resource</p>
-                    <p class="fragment" data-fragment-index="2">Stworzenie klasy enumowej</p>
-                    <p class="fragment" data-fragment-index="3">Controller do języków</p>
-                    <p class="fragment" data-fragment-index="4">Zastosowanie w JSP (flagi?)</p>
-                    <p class="fragment" data-fragment-index="5">Zrobić to na nowym projekcie</p>
-                </section>
-                <section>
-                    <h1>Notatki</h1>
-                    <p class="fragment" data-fragment-index="1">Stworzenie resource</p>
-                    <p class="fragment" data-fragment-index="2">Stworzenie klasy enumowej</p>
-                    <p class="fragment" data-fragment-index="3">Controller do języków</p>
-                    <p class="fragment" data-fragment-index="4">Zastosowanie w JSP (flagi?)</p>
-                    <p class="fragment" data-fragment-index="5">Zrobić to na nowym projekcie</p>
-                </section>
-			</div>
-		</div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+    </script>
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section>
+            <h1>Languages</h1>
+        </section>
+        <section>
+            <section>Resource</section>
+            <section>
+                <p>Stwórz folder w src/main o nazwie resources</p>
+                <p>Oznacz go - prawy przycisk, Mark directory as -> Resources Root</p>
+            </section>
+            <section>
+                <p class ="fragment">Stwórz swój zasób językowy: prawy przycisk, New -> Resource Bundle</p>
+                <p class ="fragment">Nazwij go (np. languages) i wybierz lokalizacje które Cię interesują (eng, pl)</p>
+            </section>
+            <section>
+                Nową właściwość (property) możesz dodać na dwa sposoby - ręcznie w zakładce text lub automatycznie przez
+                IDE
+            </section>
+        </section>
+        <section>
+            <h1>Notatki</h1>
+            <p class="fragment" data-fragment-index="1">Stworzenie resource</p>
+            <p class="fragment" data-fragment-index="2">Stworzenie klasy enumowej</p>
+            <p class="fragment" data-fragment-index="3">Controller do języków</p>
+            <p class="fragment" data-fragment-index="4">Zastosowanie w JSP (flagi?)</p>
+            <p class="fragment" data-fragment-index="5">Zrobić to na nowym projekcie</p>
+        </section>
+        <section>
+            <h1>Notatki</h1>
+            <p class="fragment" data-fragment-index="1">Stworzenie resource</p>
+            <p class="fragment" data-fragment-index="2">Stworzenie klasy enumowej</p>
+            <p class="fragment" data-fragment-index="3">Controller do języków</p>
+            <p class="fragment" data-fragment-index="4">Zastosowanie w JSP (flagi?)</p>
+            <p class="fragment" data-fragment-index="5">Zrobić to na nowym projekcie</p>
+        </section>
+    </div>
+</div>
 
-		<script>
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
 			// More info about config & dependencies:
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
@@ -75,6 +77,7 @@
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
 			});
-		</script>
-	</body>
+
+</script>
+</body>
 </html>
